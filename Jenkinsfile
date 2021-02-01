@@ -37,7 +37,7 @@ node {
       // Authorize the Dev Hub org with JWT key and give it an alias.
       // 
       stage('Authorize DevHub') {
-        rc = command "C:/SalesforceCLI/bin/sfdx force:auth:logout --targetusername ${SF_USERNAME} -p"
+        rc = command "C:/SalesforceCLI/bin/sfdx auth:logout --targetusername ${SF_USERNAME} -p"
         println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
         println("${toolbelt}/sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername")
         println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
